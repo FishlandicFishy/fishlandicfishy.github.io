@@ -4,11 +4,37 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>@FishlandicFishy</h1>
+<div id="corporate-greed">I know this makes me sound like some big corp trying to track you, but please enable JavaScript so that this webpage can function correctly.</div>
+    <h1>fishy's page ig</h1>
     <p><i>this page is a huge wip, of course it's going to look really trash</i></p>
     <hr>
-    <h2>stuff</h2>
-    <div class="rectangle" onclick="location.href = 'https://fishlandicfishy.github.io/lexicring/';">
+    
+	
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About</button>
+  <button class="tablinks" onclick="openCity(event, 'Stuff')">Stuff</button>
+  <button class="tablinks" onclick="openCity(event, 'Accounts')">Accounts</button>
+</div>
+
+<!-- Tab content -->
+<div id="About" class="tabcontent">
+  <h3>about</h3>
+  <ul>
+	<li>he/him (they/them is ok)</li>
+	<li>Languages: (* = not fluent)
+	  <ul>
+		<li>English (preferred)</li>
+		<li>Chinese (Cantonese, Putonghua)</li>
+		<li>Portuguese (Brazilian)*</li>
+		<li>toki pona*</li>
+	  </ul>
+	</li>
+  </ul>
+</div>
+
+<div id="Stuff" class="tabcontent">
+  <h3>stuff</h3>
+  <div class="rectangle" onclick="location.href = 'https://fishlandicfishy.github.io/lexicring/';">
         <h2>lexicring</h2>
         <p>Archival, Documentation, Dictionary</p>
     </div>
@@ -24,12 +50,42 @@
         <h2>Brainrot Skibidi Language Translator</h2>
         <p>(LingoJam) Gen Alpha translator</p>
     </div>
+</div>
+
+<div id="Accounts" class="tabcontent">
+  <h3>accounts</h3>
+  <ul>
+    <li><a href="https://youtube.com/@fishlandicfishy" style="color:#FF0000;">YouTube</a></li>
+    <li><a href="https://github.com/FishlandicFishy" style="color:#FFFFFF;">GitHub</a></li>
+    <li><a href="https://scratch.mit.edu/users/FishlandicFishy/" style="color:#FFAA00;">Scratch</a> (oh no cringe)</li>
+    <li><a href="https://www.nationstates.net/nation=nowhere_2_eletric_sic_boogaloo" style="color:#AA0000;">NationStates</a> (inactive)</li>
+</div>
     <hr>
-    <h2>accounts</h2>
-    <a href="https://youtube.com/@fishlandicfishy" style="color:#FF0000;">YouTube</a><br>
-    <a href="https://github.com/FishlandicFishy" style="color:#FFFFFF;">GitHub</a><br>
-    <a href="https://scratch.mit.edu/users/FishlandicFishy/" style="color:#FFAA00;">Scratch<sub>(oh no cringe)</sub></a><br>
-    <a href="https://www.nationstates.net/nation=nowhere_2_eletric_sic_boogaloo" style="color:#AA0000;">NationStates</a><br>
+	<p><i>Content licensed under CC0 where possible. (Code is not written by me.)</i></p>
     <hr>
+<script>
+document.getElementById('corporate-greed').parentNode.removeChild(document.getElementById('corporate-greed'));
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
 </body>
 </html>
